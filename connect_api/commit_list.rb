@@ -17,6 +17,6 @@ class CommitList
       commit_array[commit_array.size - 1] = commits.count(commit)
       commit_array.join(";")
     end
-      .uniq.sort_by {|a| a[a.rindex(";") + 1 ..a.size - 1].to_i }
+      .uniq.sort_by {|a| a[a.rindex(";") + 1 ...a.size - 1].to_i }.reverse
   end
 end
